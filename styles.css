@@ -339,15 +339,13 @@ IMAGES FLOATING */
 .floating-image.pop {
     animation: pop 0.5s ease-out forwards;
 }
-
 .heartfelt-message-container {
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); /* Centers the container */
     width: 60%;
     max-width: 500px;
-    height: auto;
     padding: 20px;
     color: white;
     font-size: 18px;
@@ -356,10 +354,11 @@ IMAGES FLOATING */
     z-index: 1000;
     opacity: 0; /* Initially hidden */
     transition: opacity 1s ease-in-out; /* Fade-in effect */
+    overflow: hidden; /* Prevent overflow of message */
 }
 
 .heartfelt-message-container.show {
-    opacity: 1;
+    opacity: 1; /* Show message */
 }
 
 .heartfelt-message {
@@ -369,6 +368,16 @@ IMAGES FLOATING */
     max-height: 400px;
     display: block;
     padding: 10px;
+    animation: scrollMessage 15s linear infinite;
+}
+
+@keyframes scrollMessage {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(-100%);
+    }
 }
 
 
