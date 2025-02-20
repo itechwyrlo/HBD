@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday!</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <!-- <div class="overlay"></div>
+    <div class="container">
+        <h1 id="greeting">Happy Birthday, My Love! 🎉</h1>
+        <div class="card" onclick="openCard()">
+            <div class="card-inner">
+                <div class="card-front">Click to Open</div>
+                <div class="card-back">
+                    <p id="message"></p>
+                </div>
+            </div>
+        </div>
+        <div class="gallery">
+            <img src="photo1.jpg" onclick="showMessage('You make my life brighter!')">
+            <img src="photo2.jpg" onclick="showMessage('Every moment with you is special!')">
+        </div>
+        <div class="gift" onclick="openGift()">
+            🎁
+            <p id="gift-message" class="hidden">I love you forever! ❤️</p>
+        </div>
+    </div> -->
+    <!-- Overlay with GIF and Button -->
+    <div class="overlay" id="overlay">
+        <div class="gif-container">
+            <img src="https://media.tenor.com/_M5PKfVvzz0AAAAj/miracle-nikki-giggle.gif" 
+             alt="Giggling GIF" 
+             width="150">
+        </div>
+        <button class="start-btn" onclick="startSurprise()">Click for a Surprise! 🎉</button>
+        <div class="countdown" id="countdown">10</div>
+    </div>
+
+    <!-- Main Content -->
+    <h1>Happy Birthday, Mahal kooo! 🎉</h1>
+    <div class="slider-container">
+        <div class="slide active">
+            <div class="card" onclick="flipCard(this)">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="images/card-front.jpg" alt="Front Cover">
+                        <p>Click mo Mahal!</p>
+                    </div>
+                    <div class="card-back">
+                        <img src="images/gf-01.jpeg" alt="Image 1">
+                        <p class="back-msg">I wish you knew how much I love you, more than I can ever show or express</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slide">
+            <div class="card" onclick="flipCard(this)">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="images/card-front.jpg" alt="Front Cover">
+                        <p>Click mo Mahal!</p>
+                    </div>
+                    <div class="card-back">
+                        <img src="images/us-01.jpeg" alt="Image 2">
+                        <p class="back-msg">Every moment with you is special!❤️</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slide">
+            <div class="card" onclick="flipCard(this)">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="images/card-front.jpg" alt="Front Cover">
+                        <p>Click mo Mahal!</p>
+                    </div>
+                    <div class="card-back">
+                        <img src="images/gf-03.jpeg" alt="Image 3">
+                        <p class="back-msg">Your smile here is truly beautiful, so captivating! ❤️</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slide">
+            <div class="card" onclick="flipCard(this)">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="images/card-front.jpg" alt="Front Cover">
+                        <p>Click mo Mahal!</p>
+                    </div>
+                    <div class="card-back">
+                        <img src="images/gf-04.jpeg" alt="Image 3">
+                        <p class="back-msg">Why are you always so beautiful? It’s unfair!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slide">
+            <div class="card" onclick="flipCard(this)">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="images/card-front.jpg" alt="Front Cover">
+                        <p>Click mo Mahal!</p>
+                    </div>
+                    <div class="card-back">
+                        <img src="images/gf-05.jpeg" alt="Image 3">
+                        <p class="back-msg">Your beauty is exquisite, just like a masterpiece!❤️</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Gift Box 🎁 -->
+    <div class="gift-container">
+        <div class="gift" onclick="openGift()">🎁</div>
+    </div>
+
+    
+     <!-- Container for Floating Images -->
+     <div class="image-container"></div>
+
+
+
+    <canvas id="fireworks"></canvas>
+    <audio id="birthday-song" src="audio/Happy Birthday Song!!!.mp3" preload="auto"></audio>
+    <script>
+        
+    </script>
+</body>
+</html>

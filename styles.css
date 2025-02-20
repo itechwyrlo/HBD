@@ -1,0 +1,376 @@
+body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background: url('images/bg-city-night.jpg') no-repeat center center fixed;
+    /* background-color: rgba(31, 31, 31, 0.014); */
+    /* filter: brightness(1%); */
+    background-size: cover;
+    overflow: hidden;
+    
+}
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: opacity 1s ease-in-out;
+    z-index: 100;
+}
+
+/* Giggling GIF */
+.gif-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: giggle 0.5s infinite alternate;
+}
+
+@keyframes giggle {
+    0% { transform: translateX(-3px); }
+    100% { transform: translateX(3px); }
+}
+
+/* Countdown styling */
+.countdown {
+    font-size: 50px;
+    font-weight: bold;
+    color: black;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+/* Main container */
+.container {
+    margin-top: 20px;
+    display: none; /* Hidden initially */
+}
+
+/* Button to start surprise */
+.start-btn {
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    background: #ff4081;
+    color: white;
+    border-radius: 8px;
+    transition: transform 0.2s;
+}
+
+.start-btn:hover {
+    transform: scale(1.1);
+}
+h1 {
+    font-size: 2.5em;
+    color: #d63384;
+}
+/* Centered slider */
+.slider-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 400px;
+    overflow: hidden;
+    /* Remove the solid border and add a shadow */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Shadow effect */
+}
+
+
+/* Slide animation */
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 1s ease-in-out;
+}
+
+/* Flip Card Container */
+.card {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+/* Inner flipping mechanism */
+.card-inner {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    transition: transform 0.8s;
+}
+
+/* Front and back styling */
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    border-radius: 10px;
+    flex-direction: column;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Front of Card */
+.card-front {
+    background: #fff;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+}
+.card-front img {
+    width: 100%;
+    height: 85%;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+.card-front p {
+    font-size: 18px;
+    color: #000;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Back of Card */
+.card-back {
+    transform: rotateY(180deg);
+    text-align: center;
+    padding: 0; /* Remove extra padding */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content */
+    align-items: center; /* Center horizontally */
+    background: transparent; /* Remove the black background */
+    border-radius: 10px;
+}
+
+/* Back Image */
+/* Back of Card */
+.card-back {
+    transform: rotateY(180deg);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    background: transparent; /* No background */
+    border-radius: 10px;
+    position: relative; /* Allows absolute positioning of text */
+}
+
+/* Back Image */
+.card-back img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Centered Text */
+.card-back p {
+    position: absolute;
+    bottom: 10%; /* Position text towards the bottom */
+    left: 50%;
+    transform: translateX(-50%);
+    color: white; /* White font */
+    font-size: 18px; /* Adjust for readability */
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6); /* Shadow for better visibility */
+    width: 90%;
+    text-align: center;
+}
+
+
+/* Slide Animation */
+.slide {
+    transform: translateX(100%);
+}
+.active {
+    transform: translateX(0%);
+}
+.inactive {
+    transform: translateX(-100%);
+}
+/* .gallery img {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+} */
+.gift {
+    font-size: 3em;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.hidden {
+    display: none;
+}
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+}
+
+
+/* 
+IMAGES FLOATING */
+/* Centered Gift Box */
+.gift-container {
+    position: absolute;
+    bottom: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+
+
+/* Gift Button 🎁 */
+/* Bouncing animation */
+@keyframes crazyBounce {
+    0% { transform: translateY(0); }
+    10% { transform: translateY(-20px); }
+    20% { transform: translateY(15px); }
+    30% { transform: translateY(-25px); }
+    40% { transform: translateY(20px); }
+    50% { transform: translateY(-30px); }
+    60% { transform: translateY(25px); }
+    70% { transform: translateY(-20px); }
+    80% { transform: translateY(15px); }
+    90% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+.crazy-bounce {
+    animation: crazyBounce 0.5s infinite;
+}
+
+
+
+/* Initially, no animation */
+.gift {
+    font-size: 60px;
+    cursor: pointer;
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* When active, start bouncing */
+.gift.bounce {
+    animation: bounce 1s infinite ease-in-out;
+}
+
+
+.gift:hover {
+    transform: scale(1.2);
+}
+
+.floating-image {
+    position: absolute;
+    width: 120px; /* Adjust as needed */
+    height: auto;
+    object-fit: contain;
+    opacity: 1;
+    animation: floatUp 6s ease-in-out forwards, sway 3s infinite alternate ease-in-out;
+}
+
+/* Floating Upwards */
+@keyframes floatUp {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    90% {
+        transform: translateY(-90vh); /* Almost at the top */
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100vh); /* Fully at the top */
+        opacity: 1;
+    }
+}
+
+/* Swaying Like a Balloon */
+@keyframes sway {
+    0% {
+        transform: translateX(-20px);
+    }
+    100% {
+        transform: translateX(20px);
+    }
+}
+
+/* Pop Effect */
+@keyframes pop {
+    0% { transform: scale(1); opacity: 1; }
+    100% { transform: scale(1.5); opacity: 0; }
+}
+
+/* Apply Pop Effect */
+.floating-image.pop {
+    animation: pop 0.5s ease-out forwards;
+}
+
+.heartfelt-message-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    max-width: 500px;
+    height: auto;
+    padding: 20px;
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    border-radius: 10px;
+    z-index: 1000;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 1s ease-in-out; /* Fade-in effect */
+}
+
+.heartfelt-message-container.show {
+    opacity: 1;
+}
+
+.heartfelt-message {
+    overflow: hidden;
+    white-space: pre-line;
+    line-height: 1.5;
+    max-height: 400px;
+    display: block;
+    padding: 10px;
+}
+
+
+
+
