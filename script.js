@@ -328,48 +328,6 @@ function showHeartfeltMessage() {
 }
 
 
-// function showHeartfeltMessage() {
-//     if (messageShown) return; 
-//     messageShown = true;
-
-//     let existingMessage = document.querySelector(".heartfelt-message-container");
-//     if (existingMessage) existingMessage.remove();
-
-//     let messageContainer = document.createElement("div");
-//     messageContainer.classList.add("heartfelt-message-container");
-
-//     let messageElement = document.createElement("div");
-//     messageElement.classList.add("heartfelt-message");
-
-//     messageElement.innerText = `
-//         You are the most amazing person I know! 🌟
-//         Every day with you is a blessing, and I am so grateful to have you in my life.
-//         No words can truly express how much you mean to me.
-
-//         You light up my world like the stars in the night sky.
-//         Through ups and downs, joys and sorrows, I want you to know  
-//         that I will always be here for you. 💖
-
-//         On this special day, I just want to remind you  
-//         how truly wonderful and cherished you are.
-
-//         Keep shining, keep smiling! 😊🎉
-//     `;
-
-//     messageContainer.appendChild(messageElement);
-//     document.body.appendChild(messageContainer);
-
-//     setTimeout(() => {
-//         messageContainer.style.opacity = "1";
-//     }, 100);
-
-    
-//     setTimeout(() => {
-//         autoScrollMessage();
-//     }, 1000);
-// }
-
-
 
 
 function fadeOutMessage() {
