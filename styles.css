@@ -381,5 +381,99 @@ IMAGES FLOATING */
 }
 
 
+/* Mobile Styles */
+@media only screen and (max-width: 600px) {
+    .slider-container {
+        width: 250px;
+        height: 350px;
+    }
+    
+    .card-front img {
+        height: 70%;
+    }
+    
+    .start-btn {
+        font-size: 16px;
+        padding: 12px 25px;
+    }
+
+    .gift-container {
+        bottom: 10px;
+    }
+
+    .heartfelt-message-container {
+        width: 90%;
+        font-size: 16px;
+    }
+
+    .floating-image {
+        width: 80px;
+    }
+
+    .countdown {
+        font-size: 30px;
+    }
+}
+
+/* Tablet Styles */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    .slider-container {
+        width: 280px;
+        height: 380px;
+    }
+
+    .card-front img {
+        height: 75%;
+    }
+
+    .start-btn {
+        font-size: 17px;
+        padding: 14px 28px;
+    }
+
+    .heartfelt-message-container {
+        width: 80%;
+        font-size: 18px;
+    }
+
+    .floating-image {
+        width: 100px;
+    }
+
+    .countdown {
+        font-size: 40px;
+    }
+}
+
+/* Desktop Styles */
+@media only screen and (min-width: 1025px) {
+    .slider-container {
+        width: 350px;
+        height: 450px;
+    }
+
+    .card-front img {
+        height: 80%;
+    }
+
+    .start-btn {
+        font-size: 20px;
+        padding: 18px 35px;
+    }
+
+    .heartfelt-message-container {
+        width: 60%;
+        font-size: 20px;
+    }
+
+    .floating-image {
+        width: 120px;
+    }
+
+    .countdown {
+        font-size: 50px;
+    }
+}
+
 
 
